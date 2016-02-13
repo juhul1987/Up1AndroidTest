@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <RelativeLayout
+                android:id="@+id/main_relative"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rel_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order"
+                        android:id="@+id/txt_order"
+                        android:textSize="18sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <View
+                        android:id="@+id/first_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/txt_order"
+                        android:layout_marginTop="10dp"
+                        android:background="#D8D8D8"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/image_back_arrow"
+                        android:background="@drawable/back_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rel_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/rel_first">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NAME"
+                        android:id="@+id/txt_Name"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your first and last name"
+                        android:layout_marginLeft="30dp"
+                        android:id="@+id/txt_name_dis"
+                        android:layout_alignBottom="@+id/txt_Name"
+                        android:layout_toRightOf="@+id/txt_Name"
+                        android:layout_toEndOf="@+id/txt_Name" />
+
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_first_name"
+                        android:hint="First Name"
+                        android:singleLine="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txt_Name"
+                        android:layout_alignLeft="@+id/txt_Name"
+                        android:layout_alignStart="@+id/txt_Name" />
+
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_last_name"
+                        android:hint="Last Name"
+                        android:singleLine="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignTop="@+id/edit_first_name"
+                        android:layout_toRightOf="@+id/edit_first_name"
+                        android:layout_toEndOf="@+id/edit_first_name" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/rel_name">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CARD NUMBER"
+                        android:id="@+id/txt_card_number"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="The log number in your card"
+                        android:layout_marginLeft="30dp"
+                        android:id="@+id/txt_card_dis"
+                        android:layout_alignBottom="@+id/txt_card_number"
+                        android:layout_toRightOf="@+id/txt_card_number"
+                        android:layout_toEndOf="@+id/txt_card_number" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_card_number"
+                        android:hint="XXXXXXXXXXXXXXXX"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_below="@+id/txt_card_number"
+                        android:layout_alignLeft="@+id/txt_card_number"
+                        android:layout_alignStart="@+id/txt_card_number" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_CVV"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/rel_card_number">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CVC"
+                        android:id="@+id/txt_CVV"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+
+
+                    <EditText
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_CVV"
+                        android:hint="123"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_below="@+id/txt_CVV"
+                        android:layout_alignLeft="@+id/txt_CVV"
+                        android:layout_alignStart="@+id/txt_CVV" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Currency"
+                        android:id="@+id/txt_Currency"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="125dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                         />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner_currency"
+                        android:entries="@array/currency"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txt_Currency"
+                        android:layout_alignLeft="@+id/txt_Currency"
+                        />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_expiration"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/rel_CVV">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EXPIRATION MONTH"
+                        android:id="@+id/txt_expiration_month"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EXPIRATION YEAR"
+                        android:id="@+id/txt_expiration_year"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                         />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner_expiration_month"
+                        android:entries="@array/expiry_month"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txt_expiration_month"
+                        android:layout_alignLeft="@+id/txt_expiration_month"
+                        android:layout_alignRight="@+id/txt_expiration_month"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner_expiration_year"
+                        android:entries="@array/expiry_year"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txt_expiration_year"
+                        android:layout_alignLeft="@+id/txt_expiration_year"
+                        android:layout_alignRight="@+id/txt_expiration_year"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rel_address_line_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/rel_expiration">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADDRESS LINE 1"
+                        android:id="@+id/txt_address_line_1"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_address_line_1"
+                        android:hint="paris - st . 09879"
+                        android:singleLine="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_below="@+id/txt_address_line_1"
+                        android:layout_alignLeft="@+id/txt_address_line_1"
+                        android:layout_alignStart="@+id/txt_address_line_1" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rel_address_line_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/rel_address_line_1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADDRESS LINE 2"
+                        android:id="@+id/txt_address_line_2"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_address_line_2"
+                        android:hint="paris - st . 09879"
+                        android:singleLine="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_below="@+id/txt_address_line_2"
+                        android:layout_alignLeft="@+id/txt_address_line_2"
+                        android:layout_alignStart="@+id/txt_address_line_2" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rel_city_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/rel_address_line_2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CITY"
+                        android:id="@+id/txt_city"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="STATE"
+                        android:id="@+id/txt_state"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_above="@+id/edit_city"
+                        android:layout_alignLeft="@+id/edit_state"
+                        android:layout_alignStart="@+id/edit_state" />
+
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_city"
+                        android:hint="city"
+                        android:singleLine="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txt_city"
+                        android:layout_alignLeft="@+id/txt_city"
+                        android:layout_alignStart="@+id/txt_city" />
+
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_state"
+                        android:hint="state"
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignTop="@+id/edit_city"
+                        android:layout_toRightOf="@+id/edit_city"
+                        android:layout_toEndOf="@+id/edit_city" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_zipcoded"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/rel_city_state">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ZIP CODE"
+                        android:id="@+id/txt_zipcode"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="COUNTRY"
+                        android:textStyle="bold"
+                        android:id="@+id/txt_country"
+                        android:textColor="#000000"
+                        android:layout_above="@+id/edit_zipcode"
+                        android:layout_alignLeft="@+id/edit_country"
+                        android:layout_alignStart="@+id/edit_country" />
+
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_zipcode"
+                        android:hint="Zip code"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txt_zipcode"
+                        android:layout_alignLeft="@+id/txt_zipcode"
+                        android:layout_alignStart="@+id/txt_zipcode" />
+
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_country"
+                        android:hint="Country"
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignTop="@+id/edit_zipcode"
+                        android:layout_toRightOf="@+id/edit_zipcode"
+                        android:layout_toEndOf="@+id/edit_zipcode" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rel_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/rel_zipcoded">
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_comment"
+                        android:hint="COMMENT"
+                        android:singleLine="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:inputType="textMultiLine"
+                       android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rel_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel_comment">
+
+
+
+                   <Button
+                       android:id="@+id/btn_pay"
+                       android:layout_width="match_parent"
+                       android:background="@drawable/billing"
+                       android:textColor="#FFFFFF"
+                       android:layout_height="60dp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</ScrollView>
